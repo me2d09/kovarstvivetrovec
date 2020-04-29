@@ -1,0 +1,40 @@
+---
+layout: default
+map: true
+---
+
+<div id="single">
+    <h2><span>Kontakt</span></h2>
+    <div style="float: right; width: 300px;" >
+<p>
+<b>email:</b><br />
+<a href="mailto:petr.vetrovec@email.cz">petr.vetrovec@email.cz</a><br />
+<a href="mailto:couda.kovar@seznam.cz">couda.kovar@seznam.cz</a></p>
+<p>
+<b>mobil:</b> 731 510 182
+</p>
+</div>
+<div><p><b>adresa:</b><br />
+Dobřichovice<br />
+Pražská 883<br />
+25229</p>
+<p><a href="vizitka.vcf"><b>
+<img src="images/vcard.png" alt="vizitka" /> vizitka ke stažení</b></a></p>
+</div>
+<div style="clear: both;">&nbsp;</div>
+<div id="mojeMapa" style="width:520px;height:400px;border:1px solid silver;"></div>
+<script type="text/javascript">
+    var stred = SMap.Coords.fromWGS84(14.2698708, 49.9271547);
+    var mapa = new SMap(JAK.gel("mojeMapa"), stred, 14);
+    mapa.addDefaultLayer(SMap.DEF_BASE).enable();
+    mapa.addDefaultControls();	
+    
+    var layer = new SMap.Layer.Marker();
+    mapa.addLayer(layer);
+    layer.enable();
+
+    var options = {};
+    var marker = new SMap.Marker(stred, "myMarker", options);
+    layer.addMarker(marker);
+</script>
+</div>
